@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DC Prime</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+    <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-center" href="index.html">DC Prime</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html">Formulário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultar.html">Consulta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- NavBar End -->
+        <div class="container-fluid bg-secondary text-light text-center py-4">
+            <div class="container">
+                <div class="container d-flex justify-content-center col-2">
+                    <img onclick="abrir('https://www.dc.com/characters/superman')"  class="img-fluid m-1" src="imgs/Characters/Superman.jpg" alt="Superman" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/batman')" class="img-fluid m-1" src="imgs/Characters/Batman.jpg" alt="Batman" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/the-flash')" class="img-fluid m-1" src="imgs/Characters/The Flash.jpg" alt="The Flash" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/wonder-woman')" class="img-fluid m-1" src="imgs/Characters/Wonder Woman.jpg" alt="Wonder Woman" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/green-lantern')" class="img-fluid m-1" src="imgs/Characters/Green Lantern 1.jpg" alt="Green Lantern" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/green-arrow')" class="img-fluid m-1" src="imgs/Characters/Green Arrow.jpg" alt="Green Arrow" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/cyborg')" class="img-fluid m-1" src="imgs/Characters/Cyborg.jpg" alt="Cyborg" style="cursor: pointer">
+                    <img onclick="abrir('https://www.dc.com/characters/aquaman')" class="img-fluid m-1" src="imgs/Characters/Aquaman.jpg" alt="Aquaman" style="cursor: pointer">
+                </div>
+            </div>
+        </div>
+
+        <div class="herois">
+            <div class="bg-body-tertiary p-3">
+                <h1>Superman</h1>
+                <h5>Faster than a speeding bullet, more powerful than a locomotive… The Man of Steel fights a never-ending battle for truth, justice, and the American way.</h5>
+                <div id="superman" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>Batman</h1>
+                <h5>One of the most iconic fictional characters in the world, Batman has dedicated his life to an endless crusade, a war on all criminals in the name of his murdered parents, who were taken from him when he was just a child. Since that tragic night, he has trained his body and mind to near physical perfection to be a self-made Super Hero. He's developed an arsenal of technology that would put most armies to shame. And he's assembled teams of his fellow DC Super Heroes, like the Justice League, the Outsiders and Batman Incorporated.</h5>
+                <div id="batman" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>The Flash</h1>
+                <h5>The mysterious power known as the Speed Force is an energy field that has, over the centuries, granted incredible powers of velocity to certain heroes. The most famous of these is the Flash, also known as the Fastest Man Alive. Ever since the days of World War II, there has been a man clad in red who can run at impossible speeds, using his power to save lives and defend those who cannot defend themselves. All between the ticks of a second.</h5>
+                <div id="flash" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>Wonder Woman</h1>
+                <h5>One of the most beloved and iconic DC Super Heroes of all time, Wonder Woman has stood for nearly eighty years as a symbol of truth, justice and equality to people everywhere. Raised on the hidden island of Themyscira, also known as Paradise Island, Diana is an Amazon, like the figures of Greek legend, and her people's gift to humanity.</h5>
+                <div id="wonder" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>Green Lantern</h1>
+                <h5>Test pilot Hal Jordan went from being a novelty, the first-ever human Green Lantern, to one of the most legendary Lanterns to ever wield a power ring.</h5>
+                <div id="lantern" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>Green Arrow</h1>
+                <h5>Billionaire Oliver Queen uses both his wealth and his unmatched archery skills as the Justice League's battling bowman, Green Arrow.</h5>
+                <div id="Arrow" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>Cyborg</h1>
+                <h5>Part man, part machine, Vic Stone is a former member of the Teen Titans and a current member of the Justice League who wrestles to preserve his humanity with every new upgrade.</h5>
+                <div id="cyborg"  class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+            <div class="bg-body-tertiary p-3">
+                <h1>Aquaman</h1>
+                <h5>The son of a lighthouse keeper and an Atlantean queen, Arthur Curry is the bridge between the surface world and his tumultuous realm of the sea.</h5>
+                <div id="aquaman" class="container d-flex justify-content-center col-2">
+                    <!-- classes das imagens (class="img-fluid m-2") -->
+                </div>
+            </div>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/funcoes.js" crossorigin="anonymous"></script>
+        <script>
+
+        </script>
+    </body>
+</html>

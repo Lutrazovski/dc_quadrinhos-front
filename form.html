@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<!-- NavBar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-center" href="index.html">DC Prime</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="form.html">Formulário</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consultar.html">Consulta</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- NavBar End -->
+  <div class="container custom-container align-items-start m-5 text-center bg-body-secondary p-5 rounded" >
+    <h1>Cadastro</h1>
+    <form id="formcadastro">
+      <legend>Dados do Quadrinho</legend>
+      <div class="mb-3 row">
+        <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+        <input type="text" class="col form-control l" id="nome" name="nome">
+      </div>
+      <div class="mb-3 row">
+        <label for="imagem" class="col-sm-2 col-form-label">Imagem Base64</label>
+        <input type="text" class="col form-control l" id="imagem" name="imagem">
+      </div>
+      <div class="mb-3 row ">
+        <label for="heroi" class="col-sm-2 form-label">Heroi</label>
+        <select class="form-select col" id="heroi" name="heroi">
+          <option selected>Escolha...</option>
+
+          <!-- Adicione as demais opções aqui -->
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+    </form>
+  </div>
+
+  <div id="loaderModal" class="modal">
+    <div class="modal-content">
+      <div class=" text-primary" role="status">
+        <span class="sr-only">Carregando...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/funcoes.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', listarHerois);
+    document.getElementById('formcadastro').addEventListener('submit', gravarQuadrinho)
+  </script>
+</body>
+</html>
