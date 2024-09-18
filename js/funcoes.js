@@ -35,10 +35,9 @@ function listarQuadrinhos() {
             dados.forEach(function(quadrinho){
                 let linha = document.createElement('tr');
                 let conteudoLinha = `
-                         <td> ${quadrinho.nome}</td>
-                         <td>${quadrinho.imagem}</td>
-                         <td>${quadrinho.heroi.nome}</td>
-                         <td>
+                         <td style="align-content: center">${quadrinho.nome}</td>
+                         <td><img width="10%" height="10%" src="${quadrinho.imagem}" alt="${quadrinho.nome}"></td>
+                         <td style="align-content: center">
                             <button class="btn btn-danger" onClick="excluirQuadrinho(${quadrinho.id})">Excluir</button>
                         </td>`;
                 linha.innerHTML = conteudoLinha;
@@ -92,5 +91,30 @@ function gravarQuadrinho(evento){
         }else{
             alert('Erro ao cadastrar pessoa')
         }
+    });
+}
+
+function popularSessoes(){
+    listarQuadrinhosPorHeroi(1, "superman")
+    listarQuadrinhosPorHeroi(2, "batman")
+    listarQuadrinhosPorHeroi(3, "flash")
+    listarQuadrinhosPorHeroi(4, "wonder")
+    listarQuadrinhosPorHeroi(5, "lantern")
+    listarQuadrinhosPorHeroi(6, "arrow")
+    listarQuadrinhosPorHeroi(7, "cyborg")
+    listarQuadrinhosPorHeroi(8, "aquaman")
+}
+
+function listarQuadrinhosPorHeroi(idHeroi, idDiv) {
+
+    fetch('http://localhost:8080/quadrinhos/heroi/'+idHeroi).
+    then(function (response){
+        response.json().then(function(dados) {
+            let divHeroi = document.getElementById(idDiv)
+            divHeroi.innerHTML = '';
+            dados.forEach(function(quadrinho) {
+                divHeroi.innerHTML += `<img class="img-fluid m-2" src="${quadrinho.imagem}" alt="Cyborg" style="cursor: pointer">`;
+            })
+        })
     });
 }
